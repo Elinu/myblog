@@ -14,6 +14,8 @@
     
     
     
+    <link rel="alternate" href="www.elinu.me" title="Elinu&#39;s Blog" type="application/atom+xml">
+    
     
     <link rel="icon" href="/img/favicon.ico">
     
@@ -47,6 +49,10 @@
 					
 						<li><a href="/archives">Archives</a></li>
 					
+						<li><a href="/tags">Tags</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
 					<li>
 					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
@@ -75,7 +81,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-20T16:41:48.000Z" itemprop="datePublished">Oct 21 2014</time>
-    Updated:<time datetime="2014-10-20T16:49:43.000Z" itemprop="dateModified">Oct 21 2014</time>
+    Updated:<time datetime="2014-10-22T08:17:33.000Z" itemprop="dateModified">Oct 22 2014</time>
     
   </p>
 </header>
@@ -92,6 +98,16 @@
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/个人/">个人</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/自我介绍/">自我介绍</a>
+</div>
 
 
 
@@ -143,16 +159,49 @@
 <aside class="clearfix">
 
   
-
-  
-
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS</a>
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/测试/" title="测试">测试<sup>2</sup></a></li>
+		
+			<li><a href="/categories/生活/" title="生活">生活<sup>3</sup></a></li>
+		
+			<li><a href="/categories/自我介绍/" title="自我介绍">自我介绍<sup>1</sup></a></li>
+		
+		</ul>
 </div>
 
-  <iframe width="279" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=279&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=0&uid=2505375937&verifier=fa2fdb00&colors=ea6753,ffffff,2ca6cb,0082cb,ea6753&dpc=1"></iframe>
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/个人/" title="个人">个人<sup>1</sup></a></li>
+		
+			<li><a href="/tags/图片/" title="图片">图片<sup>1</sup></a></li>
+		
+			<li><a href="/tags/开篇/" title="开篇">开篇<sup>1</sup></a></li>
+		
+			<li><a href="/tags/微博/" title="微博">微博<sup>1</sup></a></li>
+		
+			<li><a href="/tags/生活/" title="生活">生活<sup>1</sup></a></li>
+		
+			<li><a href="/tags/视频/" title="视频">视频<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="www.elinu.me" target="_blank" title="rss">RSS</a>
+</div>
 
 </aside>
+</div>
+<div id="asidepart">
+<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=0&isWeibo=1&isFans=0&uid=2505375937&verifier=fa2fdb00&colors=ea6753,ffffff,666666,0082cb,ea6753&dpc=1"></iframe>
 </div>
     </div>
     <footer><div id="footer" >
@@ -299,6 +348,27 @@ $(document).ready(function(){
 </script> 
 
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
 
 
 <script type="text/javascript">
